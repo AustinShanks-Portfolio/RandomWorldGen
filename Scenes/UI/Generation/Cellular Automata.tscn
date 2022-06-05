@@ -1,0 +1,148 @@
+[gd_scene load_steps=2 format=3 uid="uid://xhltfv1xjcms"]
+
+[ext_resource type="Script" path="res://Scenes/UI/Generation/Cellular_Automata.gd" id="1_o0u17"]
+
+[node name="Cellular Automata" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 41.0
+offset_right = -4.0
+offset_bottom = -4.0
+script = ExtResource( "1_o0u17" )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HB1" type="HBoxContainer" parent="."]
+offset_right = 1016.0
+offset_bottom = 33.0
+
+[node name="From" type="OptionButton" parent="HB1"]
+offset_right = 110.0
+offset_bottom = 33.0
+rect_min_size = Vector2(110, 0)
+theme_override_font_sizes/font_size = 16
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="->" type="Label" parent="HB1"]
+offset_left = 114.0
+offset_right = 128.0
+offset_bottom = 33.0
+size_flags_vertical = 5
+text = "->"
+vertical_alignment = 1
+
+[node name="To" type="OptionButton" parent="HB1"]
+offset_left = 132.0
+offset_right = 242.0
+offset_bottom = 33.0
+rect_min_size = Vector2(110, 0)
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Spacer" type="Label" parent="HB1"]
+offset_left = 246.0
+offset_right = 799.0
+offset_bottom = 33.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = ":"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Neighbor" type="OptionButton" parent="HB1"]
+offset_left = 803.0
+offset_right = 913.0
+offset_bottom = 33.0
+rect_min_size = Vector2(110, 0)
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name=">" type="Label" parent="HB1"]
+offset_left = 917.0
+offset_right = 926.0
+offset_bottom = 33.0
+size_flags_vertical = 5
+text = ">"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Count" type="SpinBox" parent="HB1"]
+offset_left = 930.0
+offset_right = 1016.0
+offset_bottom = 33.0
+max_value = 8.0
+rounded = true
+
+[node name="HB2" type="HBoxContainer" parent="."]
+offset_top = 37.0
+offset_right = 1016.0
+offset_bottom = 70.0
+
+[node name="Chance%" type="Label" parent="HB2"]
+offset_right = 72.0
+offset_bottom = 33.0
+rect_min_size = Vector2(72, 0)
+size_flags_vertical = 5
+text = "Chance%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ChanceSlider" type="HSlider" parent="HB2"]
+offset_left = 76.0
+offset_right = 926.0
+offset_bottom = 33.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.05
+value = 1.0
+tick_count = 5
+
+[node name="ChanceBox" type="SpinBox" parent="HB2"]
+offset_left = 930.0
+offset_right = 1016.0
+offset_bottom = 33.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="HB3" type="HBoxContainer" parent="."]
+offset_top = 74.0
+offset_right = 1016.0
+offset_bottom = 107.0
+
+[node name="Loops" type="Label" parent="HB3"]
+offset_right = 72.0
+offset_bottom = 33.0
+rect_min_size = Vector2(72, 0)
+size_flags_vertical = 5
+text = "Repeat"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Spinbox" type="SpinBox" parent="HB3"]
+offset_left = 76.0
+offset_right = 162.0
+offset_bottom = 33.0
+rounded = true
+
+[node name="Button" type="Button" parent="."]
+offset_top = 111.0
+offset_right = 1016.0
+offset_bottom = 140.0
+text = "Simulate Celluar Automata"
+
+[connection signal="value_changed" from="HB1/Count" to="." method="_on_Count_value_changed"]
+[connection signal="value_changed" from="HB2/ChanceSlider" to="." method="_on_ChanceSlider_value_changed"]
+[connection signal="value_changed" from="HB2/ChanceBox" to="." method="_on_ChanceBox_value_changed"]
+[connection signal="value_changed" from="HB3/Spinbox" to="." method="_on_Spinbox_value_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

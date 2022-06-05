@@ -1,0 +1,137 @@
+[gd_scene load_steps=6 format=3 uid="uid://cywxw1l7k1iww"]
+
+[ext_resource type="PackedScene" uid="uid://c50mse7rhkc6x" path="res://Scenes/Player/Player.tscn" id="1_rte4p"]
+[ext_resource type="Texture2D" uid="uid://cmbflmjx6vuve" path="res://Sprite/Tiles/LandTiles.png" id="2_c5jev"]
+[ext_resource type="PackedScene" uid="uid://d3lpynxswplpu" path="res://Scenes/Object/Wall.tscn" id="2_uifqc"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g2pow"]
+texture = ExtResource( "2_c5jev" )
+use_texture_padding = false
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_m6sgv"]
+sources/1 = SubResource( "TileSetAtlasSource_g2pow" )
+
+[node name="World" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(512, 300)
+
+[node name="Player" parent="." instance=ExtResource( "1_rte4p" )]
+position = Vector2(137, 105)
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+tile_set = SubResource( "TileSet_m6sgv" )
+format = 2
+layer_0/name = "Ground"
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Wall" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(216, 136)
+
+[node name="Wall2" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(216, 152)
+
+[node name="Wall3" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(216, 168)
+
+[node name="Wall4" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(216, 184)
+
+[node name="Wall5" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(216, 200)
+
+[node name="Wall6" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(216, 120)
+
+[node name="Wall7" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(216, 104)
+
+[node name="Wall8" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(216, 88)
+
+[node name="Wall9" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(232, 104)
+
+[node name="Wall10" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(248, 104)
+
+[node name="Wall20" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(232, 200)
+
+[node name="Wall21" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(248, 200)
+
+[node name="Wall22" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(264, 200)
+
+[node name="Wall23" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(296, 200)
+
+[node name="Wall24" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(312, 200)
+
+[node name="Wall25" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(328, 200)
+
+[node name="Wall26" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(312, 104)
+
+[node name="Wall27" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(328, 104)
+
+[node name="Wall28" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(344, 104)
+
+[node name="Wall29" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(360, 104)
+
+[node name="Wall30" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(376, 104)
+
+[node name="Wall31" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(376, 120)
+
+[node name="Wall32" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(376, 136)
+
+[node name="Wall33" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(376, 152)
+
+[node name="Wall34" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(376, 168)
+
+[node name="Wall35" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(376, 184)
+
+[node name="Wall36" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(376, 200)
+
+[node name="Wall11" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(264, 104)
+
+[node name="Wall12" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(280, 104)
+
+[node name="Wall13" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(296, 104)
+
+[node name="Wall14" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(280, 120)
+
+[node name="Wall15" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(280, 136)
+
+[node name="Wall16" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(280, 152)
+
+[node name="Wall17" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(280, 168)
+
+[node name="Wall18" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(280, 184)
+
+[node name="Wall19" parent="Walls" instance=ExtResource( "2_uifqc" )]
+position = Vector2(280, 200)

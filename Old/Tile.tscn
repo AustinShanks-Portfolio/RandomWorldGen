@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://n28ft6lyxbej"]
+
+[ext_resource type="Texture2D" uid="uid://bomxsp0t4ay7m" path="res://Sprite/Tiles/Mesh.png" id="1_8ct1d"]
+[ext_resource type="ArrayMesh" uid="uid://bs21hme1x8ibg" path="res://MeshTile.tres" id="1_pgqfc"]
+
+[node name="Tile" type="MeshInstance2D"]
+mesh = ExtResource( "1_pgqfc" )
+texture = ExtResource( "1_8ct1d" )

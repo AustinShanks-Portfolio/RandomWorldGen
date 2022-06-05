@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://cfc37t64sf2rc"]
+
+[ext_resource type="TileSet" uid="uid://dt78kj71xxttg" path="res://Tilemap.tres" id="1_eye5x"]
+[ext_resource type="Script" path="res://NewGen.gd" id="2_aifkx"]
+[ext_resource type="PackedScene" uid="uid://cd86c2p3slvny" path="res://Scenes/Player/Player.tscn" id="3_1ljyf"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_xwta8"]
+fractal_lacunarity = 3.0
+fractal_gain = 0.25
+fractal_weighted_strength = 0.35
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_wg1ia"]
+fractal_octaves = 9
+fractal_lacunarity = 3.0
+fractal_gain = 0.25
+fractal_weighted_strength = 0.5
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_q04jo"]
+fractal_octaves = 9
+fractal_lacunarity = 3.0
+fractal_weighted_strength = 0.25
+
+[node name="RandomGen" type="Node2D"]
+
+[node name="NewGen" type="TileMap" parent="."]
+tile_set = ExtResource( "1_eye5x" )
+format = 2
+script = ExtResource( "2_aifkx" )
+elevation = SubResource( "FastNoiseLite_xwta8" )
+moisture = SubResource( "FastNoiseLite_wg1ia" )
+tempeture = SubResource( "FastNoiseLite_q04jo" )
+
+[node name="Player" parent="." instance=ExtResource( "3_1ljyf" )]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgvw1ohmynp6y"]
+
+[ext_resource type="TileSet" uid="uid://dt78kj71xxttg" path="res://Tilemap.tres" id="1_4ks36"]
+[ext_resource type="Script" path="res://Scenes/Chunks/Chunk.gd" id="2_rrnq2"]
+
+[node name="Chunk" type="TileMap" groups=["Chunks"]]
+tile_set = ExtResource( "1_4ks36" )
+format = 2
+script = ExtResource( "2_rrnq2" )

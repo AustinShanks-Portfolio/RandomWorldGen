@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://10c5l8khjmvu"]
+
+[ext_resource type="PackedScene" uid="uid://j2v6xckoe5s7" path="res://Scenes/UI/Generation/SimulationPanel.tscn" id="1_oh4po"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="SimulationPanel" parent="." instance=ExtResource( "1_oh4po" )]
+visible = false

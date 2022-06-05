@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="TileSet" uid="uid://dt78kj71xxttg" path="res://Tilemap.tres" id="1_2sp47"]
+[ext_resource type="Script" path="res://Old/Tilemap.gd" id="2_hmwn8"]
+[ext_resource type="PackedScene" path="res://Scenes/Player/Player.tscn" id="3_qtr46"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Tilemap" type="TileMap" parent="."]
+tile_set = ExtResource( "1_2sp47" )
+cell_quadrant_size = 32
+format = 2
+script = ExtResource( "2_hmwn8" )
+
+[node name="Player" parent="." instance=ExtResource( "3_qtr46" )]
+position = Vector2(0, 9456)

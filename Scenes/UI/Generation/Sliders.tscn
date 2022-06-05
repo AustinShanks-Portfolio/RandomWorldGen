@@ -1,0 +1,257 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scenes/UI/Generation/Sliders.gd" id="1_1cgaj"]
+
+[node name="Sliders" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 41.0
+offset_right = -4.0
+offset_bottom = -4.0
+mouse_filter = 2
+script = ExtResource( "1_1cgaj" )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dry" type="HBoxContainer" parent="."]
+offset_right = 1912.0
+offset_bottom = 33.0
+mouse_filter = 2
+
+[node name="Dry" type="Label" parent="Dry"]
+offset_top = 3.0
+offset_right = 80.0
+offset_bottom = 29.0
+rect_min_size = Vector2(80, 0)
+text = "Dry "
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="Dry"]
+offset_left = 84.0
+offset_right = 1838.0
+offset_bottom = 33.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.05
+value = 0.25
+tick_count = 9
+
+[node name="Box" type="LineEdit" parent="Dry"]
+offset_left = 1842.0
+offset_right = 1912.0
+offset_bottom = 33.0
+
+[node name="Wet" type="HBoxContainer" parent="."]
+offset_top = 37.0
+offset_right = 1912.0
+offset_bottom = 70.0
+mouse_filter = 2
+
+[node name="Wet" type="Label" parent="Wet"]
+offset_top = 3.0
+offset_right = 80.0
+offset_bottom = 29.0
+rect_min_size = Vector2(80, 0)
+text = "Wet "
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="Wet"]
+offset_left = 84.0
+offset_right = 1838.0
+offset_bottom = 33.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.05
+value = 0.25
+tick_count = 9
+
+[node name="Box" type="LineEdit" parent="Wet"]
+offset_left = 1842.0
+offset_right = 1912.0
+offset_bottom = 33.0
+
+[node name="Label" type="Label" parent="."]
+offset_top = 74.0
+offset_right = 1912.0
+offset_bottom = 97.0
+
+[node name="Cold" type="HBoxContainer" parent="."]
+offset_top = 101.0
+offset_right = 1912.0
+offset_bottom = 134.0
+mouse_filter = 2
+
+[node name="Cold" type="Label" parent="Cold"]
+offset_top = 3.0
+offset_right = 80.0
+offset_bottom = 29.0
+rect_min_size = Vector2(80, 0)
+text = "Cold"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="Cold"]
+offset_left = 84.0
+offset_right = 1838.0
+offset_bottom = 33.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.05
+value = 0.25
+tick_count = 9
+
+[node name="Box" type="LineEdit" parent="Cold"]
+offset_left = 1842.0
+offset_right = 1912.0
+offset_bottom = 33.0
+
+[node name="Hot" type="HBoxContainer" parent="."]
+offset_top = 138.0
+offset_right = 1912.0
+offset_bottom = 171.0
+mouse_filter = 2
+
+[node name="Hot" type="Label" parent="Hot"]
+offset_top = 3.0
+offset_right = 80.0
+offset_bottom = 29.0
+rect_min_size = Vector2(80, 0)
+text = "Hot "
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="Hot"]
+offset_left = 84.0
+offset_right = 1838.0
+offset_bottom = 33.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.05
+value = 0.25
+tick_count = 9
+
+[node name="Box" type="LineEdit" parent="Hot"]
+offset_left = 1842.0
+offset_right = 1912.0
+offset_bottom = 33.0
+
+[node name="Label2" type="Label" parent="."]
+offset_top = 175.0
+offset_right = 1912.0
+offset_bottom = 198.0
+
+[node name="Ocean" type="HBoxContainer" parent="."]
+offset_top = 202.0
+offset_right = 1912.0
+offset_bottom = 235.0
+mouse_filter = 2
+
+[node name="Ocean" type="Label" parent="Ocean"]
+offset_top = 3.0
+offset_right = 80.0
+offset_bottom = 29.0
+rect_min_size = Vector2(80, 0)
+text = "Ocean"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="Ocean"]
+offset_left = 84.0
+offset_right = 1838.0
+offset_bottom = 33.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.05
+value = 0.25
+tick_count = 9
+
+[node name="Box" type="LineEdit" parent="Ocean"]
+offset_left = 1842.0
+offset_right = 1912.0
+offset_bottom = 33.0
+
+[node name="Mountain" type="HBoxContainer" parent="."]
+offset_top = 239.0
+offset_right = 1912.0
+offset_bottom = 272.0
+mouse_filter = 2
+
+[node name="Mountain" type="Label" parent="Mountain"]
+offset_top = 3.0
+offset_right = 80.0
+offset_bottom = 29.0
+rect_min_size = Vector2(80, 0)
+text = "Mountain"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="Mountain"]
+offset_left = 84.0
+offset_right = 1838.0
+offset_bottom = 33.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.05
+value = 0.25
+tick_count = 9
+
+[node name="Box" type="LineEdit" parent="Mountain"]
+offset_left = 1842.0
+offset_right = 1912.0
+offset_bottom = 33.0
+
+[node name="Peak" type="HBoxContainer" parent="."]
+offset_top = 276.0
+offset_right = 1912.0
+offset_bottom = 309.0
+mouse_filter = 2
+
+[node name="Peak" type="Label" parent="Peak"]
+offset_top = 3.0
+offset_right = 80.0
+offset_bottom = 29.0
+rect_min_size = Vector2(80, 0)
+text = "Peak"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="Peak"]
+offset_left = 84.0
+offset_right = 1838.0
+offset_bottom = 33.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.05
+value = 0.25
+tick_count = 9
+
+[node name="Box" type="LineEdit" parent="Peak"]
+offset_left = 1842.0
+offset_right = 1912.0
+offset_bottom = 33.0
+
+[connection signal="value_changed" from="Dry/HSlider" to="." method="_on_HSlider_value_changed" binds= ["dry"]]
+[connection signal="text_submitted" from="Dry/Box" to="." method="_on_Box_text_submitted" binds= ["dry"]]
+[connection signal="value_changed" from="Wet/HSlider" to="." method="_on_HSlider_value_changed" binds= ["wet"]]
+[connection signal="text_submitted" from="Wet/Box" to="." method="_on_Box_text_submitted" binds= ["wet"]]
+[connection signal="value_changed" from="Cold/HSlider" to="." method="_on_HSlider_value_changed" binds= ["cold"]]
+[connection signal="text_submitted" from="Cold/Box" to="." method="_on_Box_text_submitted" binds= ["cold"]]
+[connection signal="value_changed" from="Hot/HSlider" to="." method="_on_HSlider_value_changed" binds= ["hot"]]
+[connection signal="text_submitted" from="Hot/Box" to="." method="_on_Box_text_submitted" binds= ["hot"]]
+[connection signal="value_changed" from="Ocean/HSlider" to="." method="_on_HSlider_value_changed" binds= ["ocean"]]
+[connection signal="text_submitted" from="Ocean/Box" to="." method="_on_Box_text_submitted" binds= ["ocean"]]
+[connection signal="value_changed" from="Mountain/HSlider" to="." method="_on_HSlider_value_changed" binds= ["mountain"]]
+[connection signal="text_submitted" from="Mountain/Box" to="." method="_on_Box_text_submitted" binds= ["mountain"]]
+[connection signal="value_changed" from="Peak/HSlider" to="." method="_on_HSlider_value_changed" binds= ["peak"]]
+[connection signal="text_submitted" from="Peak/Box" to="." method="_on_Box_text_submitted" binds= ["peak"]]

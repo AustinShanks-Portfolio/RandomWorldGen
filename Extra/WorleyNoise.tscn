@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Extra/WorleyNoise.gd" id="1_lf561"]
+
+[node name="WorleyNoise" type="Sprite2D"]
+script = ExtResource( "1_lf561" )

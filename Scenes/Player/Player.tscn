@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cd86c2p3slvny"]
+
+[ext_resource type="Script" path="res://Scenes/Player/Player.gd" id="1_d3sje"]
+[ext_resource type="Texture2D" uid="uid://btmuk1fqo0k4x" path="res://Sprite/PlayerBlock.png" id="2_y8p6p"]
+[ext_resource type="PackedScene" uid="uid://10c5l8khjmvu" path="res://Scenes/UI/CanvasLayer.tscn" id="3_d0ort"]
+[ext_resource type="Script" path="res://Scenes/Player/Camera2D.gd" id="3_dy8h3"]
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 5
+motion_mode = 1
+script = ExtResource( "1_d3sje" )
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource( "2_y8p6p" )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+script = ExtResource( "3_dy8h3" )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( "3_d0ort" )]

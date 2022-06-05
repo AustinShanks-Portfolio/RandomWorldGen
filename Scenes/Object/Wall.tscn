@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3lpynxswplpu"]
+
+[ext_resource type="Script" path="res://Scenes/Object/Wall.gd" id="1_3ffoq"]
+[ext_resource type="Texture2D" uid="uid://b2uur7m1wx70o" path="res://Sprite/Wood_Walls.png" id="2_avtpd"]
+[ext_resource type="PackedScene" uid="uid://ddg8a0xuflpoi" path="res://Scenes/UI/NodeHealthBar.tscn" id="3_va34f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4yflc"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tf00g"]
+size = Vector2(16, 16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_j5y55"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="Wall" type="StaticBody2D"]
+script = ExtResource( "1_3ffoq" )
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource( "2_avtpd" )
+region_enabled = true
+region_rect = Rect2(32, 0, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( "RectangleShape2D_4yflc" )
+
+[node name="HealthDisplay" parent="." instance=ExtResource( "3_va34f" )]
+position = Vector2(0, -10)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( "RectangleShape2D_tf00g" )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( "OccluderPolygon2D_j5y55" )
+
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
